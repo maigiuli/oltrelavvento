@@ -10,10 +10,7 @@
     height: 100vh;
   }
   
-  #visibleContent img {
-    max-width: 100%;
-    height: 800px;
-  }
+
   
   #visibleContent button {
     /* Aggiunto stile al bottone */
@@ -32,6 +29,25 @@
 #visibleContent button:hover {
     background-color: #FFD0E8;
     color: rgb(13, 29, 70);
+}
+
+#visibleContent .sfondo-custom2{
+    position: relative;
+    height: 800px; 
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+#visibleContent .sfondo-custom2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/wepik-export-20231116070418i98L.jpeg') center/cover no-repeat;
+    z-index: -1;
+    opacity: 0.5;
 }
 
 
@@ -269,7 +285,9 @@ nav ul li.special a {
         text-shadow: 0 0 5px  #FFD0E8, 0 0 10px  #FFD0E8, 0 0 20px #FFD700;
     }
 }
-/* Aggiungi uno stile per la nuova sezione sfondo-custom */
+
+
+
 .sfondo-custom {
     position: relative;
     height: 800px; 
@@ -277,24 +295,8 @@ nav ul li.special a {
     align-items: center;
     text-align: center;
 }
-.sfondo-custom2{
-    position: relative;
-    height: 800px; 
-    display: flex;
-    align-items: center;
-    text-align: center;
-}
-.sfondo-custom2::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('images/wepik-export-20231116070418i98L.jpeg') center/cover no-repeat;
-    z-index: -1;
-    opacity: 0.5;
-}
+
+
 
       
 .sfondo-custom p {
