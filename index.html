@@ -40,12 +40,21 @@
     <main class="main">
         
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <div id="visibleContent">
+      <img src="images/wepik-export-20231116070418i98L.jpeg"> </img>
+      <button onclick="showHiddenContent()"> Giochiamo! </button>
+  </div>
+
+
+    <div id="hiddenContent">
     <div class="field sfondo-custom">
        <p> Oltrelavvento è un piccolo progetto dedicato a tutti quelli che nonostante l'età, non hanno ancora perso l'<strong>entusiasmo </strong>dell'aprire le porticine del calendario dell'avvento. </p>
        <p> Nelle porte di Oltrelavvento non ci sono cioccolatini, ma <strong> spunti </strong> tratti dall'arte, dalla musica, dal cinema, dalla storia. Il gioco è più divertente se lo facciamo insieme: ognuno potrà lasciare il suo <strong> pensiero</strong>, commento, riflessione, anche solo una frase o una parola nel form qua sotto, specificando a quale spunto si sta riferendo.    </p>
        <p> Periodicamente le vostre risposte compariranno sotto lo spunto corrispondente, consentendo uno <strong> scambio di idee </strong> arricchente per tutti.  </p>  
      
     </div>
+  </div>
   
 <div class="container">
       <h2>Cosa ne pensi?</h2>
@@ -79,7 +88,7 @@
 
 <div class="immagine-link">
     <img src="images/deandre.jpeg" alt="Descrizione immagine">
-    <a href="https://www.youtube.com/watch?v=0br10asYODk" class="link-frase"></a>
+    <a href="https://www.youtube.com/watch?v=0br10asYODk" target="_blank" class="link-frase"></a>
      <button class="ascolta-qui" onclick="redirectToLink()"><strong>Ascolta qui</strong></button>
 
  </div>
@@ -88,7 +97,20 @@
 </div>
 </div>
 
-      
+
+<div class="striscia">
+    <div class="post-it-verde">
+      <p>Testo nel post-it</p>
+    </div>
+
+    <div class="post-it-rosa">
+      <p>Altro testo nel post-it</p>
+    </div>
+
+    <div class="post-it-verde">
+      <p>Altri contenuti</p>
+    </div>
+  </div>
 
     </main>
 
@@ -116,6 +138,14 @@
 
 
     </div>
+  <script> 
+    function showHiddenContent() {
+      // Nascondi il contenuto visibile
+      document.getElementById('visibleContent').style.display = 'none';
+      // Mostra il contenuto nascosto
+      document.getElementById('hiddenContent').style.display = 'block';
+  }
+</script>
     <script src="falling-letters.js"></script>
 <script src="oltreADV.js"></script>
         <script type="text/javascript">  emailjs.init('0Fzharw2Fcn0pLrCK')</script>
