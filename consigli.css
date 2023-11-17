@@ -277,6 +277,13 @@ nav ul li.special a {
     align-items: center;
     text-align: center;
 }
+.sfondo-custom2{
+    position: relative;
+    height: 800px; 
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
 .sfondo-custom2::before {
     content: "";
     position: absolute;
