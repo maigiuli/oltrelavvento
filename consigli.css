@@ -1,6 +1,4 @@
-#hiddenContent {
-    display: none;
-}
+
 
 #visibleContent {
     display: flex;
@@ -9,10 +7,23 @@
     justify-content: center;
     height: 800px;
   }
+  #visibleContent img {
+    height: 800px; 
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: -1;
+}
   
 
-  
-  #visibleContent button {
+#visibleContent button:hover {
+    background-color: #FFD0E8;
+    color: rgb(13, 29, 70);
+}
+
+
+#visibleContent button {
     /* Aggiunto stile al bottone */
     background-color: rgb(13, 29, 70);
     color: #FFD0E8;
@@ -25,31 +36,9 @@
     transition: background-color 0.3s ease;
   }
 
-
-#visibleContent button:hover {
-    background-color: #FFD0E8;
-    color: rgb(13, 29, 70);
-}
-
-#visibleContent .sfondo-custom2{
-    
-    height: 800px; 
-    display: flex;
-    align-items: center;
-    text-align: center;
-}
-#visibleContent .sfondo-custom2::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    
-    height: 800px;
-    background: url('images/wepik-export-20231116070418i98L.jpeg') center/cover no-repeat;
-    z-index: -1;
-    
-}
-
+  #hiddenContent {
+    display: none;
+  }
 
   .striscia {
     background-color: rgb(13, 29, 70); 
@@ -295,8 +284,6 @@ nav ul li.special a {
     align-items: center;
     text-align: center;
 }
-
-
 
       
 .sfondo-custom p {
