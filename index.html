@@ -8,8 +8,7 @@
         <link rel="stylesheet" type="text/css" href="consigli.css"/>
         
         
-        <script type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
    
 </head>
@@ -45,7 +44,7 @@
     
         <img src="images/wepik-export-20231116070418i98L.jpeg" alt="Descrizione immagine">
         <button onclick="showHiddenContent()" style="width:150px; position: absolute; top: 90%; left: 50%; transform: translate(-50%, -50%);"> Come giocare </button>
-        <button onclick="scrollToSpunto1('spunto1')" style="width:150px; position: absolute; top: 98%; left: 50%; transform: translate(-50%, -50%);"> Giochiamo !</button>
+        <button onclick="scrollToElement('spunto1')" style="width:150px; position: absolute; top: 98%; left: 50%; transform: translate(-50%, -50%);"> Giochiamo !</button>
   </div>
 
     <div id="hiddenContent">
@@ -86,11 +85,11 @@
 <div class="container">
   <div class="spunto">
       <h2> Spunto #2</h2>
-<h2> Da dove veniamo? Chi siamo? Dove andiamo? , Paul Gauguin (1897) </h2>
+<h2> Da dove veniamo? Chi siamo? Dove andiamo?, Paul Gauguin (1897) </h2>
 
 <div class="immagine-link">
   <img src="images/gauguin.jpeg" alt="Descrizione immagine">
-  <button class="ascolta-qui" onclick="redirectToLink('https://it.wikipedia.org/wiki/Da_dove_veniamo%3F_Chi_siamo%3F_Dove_andiamo%3F')"><strong>Ascolta qui</strong></button>
+  <button class="ascolta-qui" onclick="redirectToLink('https://it.wikipedia.org/wiki/Da_dove_veniamo%3F_Chi_siamo%3F_Dove_andiamo%3F')"><strong>Guarda qui</strong></button>
 </div>
 
 
@@ -111,16 +110,16 @@
   </div>
 </div>
 
-<div class="container">
-    <div class="spunto" id="spunto1">
+<div class="container" id="spunto1">
+    <div class="spunto">
         <h2> Spunto #1</h2>
 <h2> Volta la carta, Fabrizio de Andrè (1978) </h2>
 
 <div class="immagine-link">
     <img src="images/deandre.jpeg" alt="Descrizione immagine">
     <a href="https://www.youtube.com/watch?v=0br10asYODk" target="_blank" class="link-frase"></a>
-     <button class="ascolta-qui" onclick="redirectToLink('https://www.youtube.com/watch?v=0br10asYODk')"><strong>Ascolta qui</strong></button>
- </div>
+    <button class="ascolta-qui" onclick="redirectToLink('https://www.youtube.com/watch?v=0br10asYODk')"><strong>Ascolta qui</strong></button>
+  </div>
 
 
     </div>
@@ -190,6 +189,7 @@
             }
 
             function scrollToElement(elementId) {
+              console.log("Chiamata a scrollToElement con elementId:", elementId);
                var targetElement = document.getElementById(elementId);
               if (targetElement) {
                   targetElement.scrollIntoView({ behavior: 'smooth' });
@@ -198,5 +198,4 @@
       </script>
 </body>
 </html>
-
 
