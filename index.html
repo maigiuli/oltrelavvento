@@ -269,8 +269,11 @@
     </div>
   </div>
 
-  <div id="iniziale" onclick="showCele()"> Esempio</div>
-  <div id="cele">
+
+  <div id="iniziale">
+    <button onclick="showCele()" style="width:150px">Esempio </button>
+  </div>
+  <div id="cele"> 
     <div class="containerex" data-giorno="0">
     <div class="spunto">
         <h2> Spunto #0</h2>
@@ -367,8 +370,8 @@
      
 
       <script>
-        document.addEventListener("DOMContentLoaded", function() {
-        var dataInizio = new Date('2023-11-17');
+        
+        var dataInizio = new Date('2023-12-01');
         var oggi; 
         function mostraSpuntiCorrenti() {
             // Ottieni la data corrente
@@ -392,7 +395,6 @@
        
   
      mostraSpuntiCorrenti();
-        }); 
 </script>
 
 </body>
@@ -400,5 +402,4 @@
 
 </body>
 </html>
-
 
