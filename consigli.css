@@ -403,12 +403,13 @@ nav ul li.special a {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    padding: 10px 20px;
+    padding: 10px;
     background-color:  #4DA69A; 
     color: rgb(13, 29, 70);
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-align: center;
     transition: background-color 0.3s ease;
  
 
@@ -416,7 +417,6 @@ nav ul li.special a {
  .buttonform:hover {
     background-color:  #FFD0E8;
  }
-
 
 
 
