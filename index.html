@@ -84,7 +84,7 @@
 
 <div class="container" data-giorno="7">
   <div class="spunto">
-      <h2> Spunto #6</h2>
+      <h2> Spunto #7</h2>
 <h2> Memory, Cats, Elaine Page (1998) </h2>
 
 <div class="immagine-link">
@@ -269,8 +269,9 @@
     </div>
   </div>
 
-
-  <div class="containerex" data-giorno="0">
+  <div id="iniziale" onclick="showCele()"> Esempio</div>
+  <div id="cele">
+    <div class="containerex" data-giorno="0">
     <div class="spunto">
         <h2> Spunto #0</h2>
 <h2> Azzurro, Adriano Celentano (1968) </h2>
@@ -281,7 +282,7 @@
     <button class="ascolta-qui" onclick="redirectToLink('https://www.youtube.com/watch?v=HCyzGuipTd4')"><strong>Ascolta qui</strong></button>
   </div>
 
-  <div class="overlay">Esempio</div>
+ 
     </div>
 </div>
 
@@ -297,9 +298,9 @@
     <div class="post-it-verde">
       <p>Altri contenuti</p>
     </div>
-    <div class="overlay">Esempio</div>
+    
   </div>
-
+</div>
 
 
 
@@ -340,6 +341,12 @@
               // Mostra il contenuto nascosto
               document.getElementById('hiddenContent').style.display = 'block';
           }
+          function showCele() {
+              // Nascondi il contenuto visibile
+              document.getElementById('iniziale').style.display = 'none';
+              // Mostra il contenuto nascosto
+              document.getElementById('cele').style.display = 'block';
+          }
         </script>
         <script src="falling-letters.js"></script>
         <script src="oltreADV.js"></script>
@@ -360,8 +367,8 @@
      
 
       <script>
-        console.log('Script loaded');
-      var dataInizio = new Date('2023-11-17');
+        
+        var dataInizio = new Date('2023-12-01');
         var oggi; 
         function mostraSpuntiCorrenti() {
             // Ottieni la data corrente
@@ -392,4 +399,5 @@
 
 </body>
 </html>
+
 
