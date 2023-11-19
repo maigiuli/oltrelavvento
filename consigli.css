@@ -107,10 +107,12 @@
 
 
   .striscia {
-    background-color: rgb(13, 29, 70); 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Colonnesi auto-adattative */
+    gap: 20px; /* Spazio tra le colonne */
+    background-color: rgb(13, 29, 70);
     padding: 20px;
-    color: #fff; 
-    justify-content: space-around;
+    color: #fff;
     margin-bottom: 0px;
     margin-top: 0px;
   }
@@ -248,8 +250,7 @@ body {
     background-color: #4DA69A;
     border-radius: 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: none; 
-}
+  }
 
 h2 {
     text-align: center;
@@ -410,6 +411,7 @@ nav ul li.special a {
     cursor: pointer;
     text-align: center;
     transition: background-color 0.3s ease;
+  
  
 
  }
@@ -419,7 +421,9 @@ nav ul li.special a {
 
 
 
-
+.spunto{
+    margin-bottom: 10px;
+}
 
 
 
