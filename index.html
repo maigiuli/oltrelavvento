@@ -361,11 +361,11 @@
 
       <script>
         
-        var dataInizio = new Date('2023-11-16');
-
+      var dataInizio = new Date('2023-12-01');
+        var oggi; 
         function mostraSpuntiCorrenti() {
             // Ottieni la data corrente
-            var oggi = new Date();
+            oggi = new Date();
             
             // Calcola i giorni trascorsi
             var giorniTrascorsi = Math.floor((oggi - dataInizio) / (1000 * 60 * 60 * 24));
@@ -380,10 +380,9 @@
                     spunto.style.display = 'block';
                 }
             });
-             
-        
+            console.log(oggi);
         }
-    console.log(oggi);
+       
   
      mostraSpuntiCorrenti();
 </script>
