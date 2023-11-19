@@ -43,8 +43,8 @@
     <div id="visibleContent">
     
         <img src="images/wepik-export-20231116070418i98L.jpeg" alt="Descrizione immagine">
-        <button onclick="showHiddenContent()" style="width:150px; position: absolute; top: 90%; left: 50%; transform: translate(-50%, -50%);"> Come giocare </button>
-        <button onclick="scrollToElement('spunto1')" style="width:150px; position: absolute; top: 98%; left: 50%; transform: translate(-50%, -50%);"> Giochiamo!</button>
+        <button onclick="showHiddenContent()" style="width:150px; position: absolute; top: 80%; left: 50%; transform: translate(-50%, -50%);"> Come giocare </button>
+        <button onclick="scrollToElement('spunto1')" style="width:150px; position: absolute; top: 88%; left: 50%; transform: translate(-50%, -50%);"> Giochiamo!</button>
   </div>
 
     <div id="hiddenContent">
@@ -57,9 +57,10 @@
   </div>
   
 <div class="container">
+  <form id="form">
       <h2>Cosa ne pensi?</h2>
    
-<form id="form">
+
   <div class="field">
     <label for="pensieri"> Parole, pensieri, opinioni, commenti e riflessioni riguardo gli spunti: 
     </label>
@@ -94,7 +95,7 @@
   </div>
 </div>
 <div class="striscia">   
-  <button class="buttonform" onclick="scrollToElement('form')" style="width:150px">Cosa ne pensi? </button>
+  <button class="buttonform" onclick="scrollToElement('form')" style="width:200px">Cosa ne pensi? </button>
 </div>
 <div class="striscia">
   <div class="post-it-verde">
@@ -122,7 +123,7 @@
   </div>
 </div>
 <div class="striscia">   
-  <button class="buttonform" onclick="scrollToElement('form')" style="width:150px">Cosa ne pensi? </button>
+  <button class="buttonform" onclick="scrollToElement('form')" style="width:200px">Cosa ne pensi? </button>
 </div>
 <div class="striscia">
   <div class="post-it-verde">
@@ -151,7 +152,7 @@
   </div>
 </div>
 <div class="striscia">   
-  <button class="buttonform" onclick="scrollToElement('form')" style="width:150px">Cosa ne pensi? </button>
+  <button class="buttonform" onclick="scrollToElement('form')" style="width:200px">Cosa ne pensi? </button>
 </div>
 <div class="striscia">
   <div class="post-it-verde">
@@ -179,7 +180,7 @@
   </div>
 </div>
 <div class="striscia">   
-  <button class="buttonform" onclick="scrollToElement('form')" style="width:150px">Cosa ne pensi? </button>
+  <button class="buttonform" onclick="scrollToElement('form')" style="width:200px">Cosa ne pensi? </button>
 </div>
 <div class="striscia">
   <div class="post-it-verde">
@@ -207,7 +208,7 @@
   </div>
 </div>
 <div class="striscia">   
-  <button class="buttonform" onclick="scrollToElement('form')" style="width:150px">Cosa ne pensi? </button>
+  <button class="buttonform" onclick="scrollToElement('form')" style="width:200px">Cosa ne pensi? </button>
 </div>
 <div class="striscia">
   <div class="post-it-verde">
@@ -236,7 +237,7 @@
   </div>
 </div>
 <div class="striscia">   
-  <button class="buttonform" onclick="scrollToElement('form')" style="width:150px">Cosa ne pensi? </button>
+  <button class="buttonform" onclick="scrollToElement('form')" style="width:200px">Cosa ne pensi? </button>
 </div>
 <div class="striscia">
   <div class="post-it-verde">
@@ -268,7 +269,7 @@
 </div>
 
 <div class="striscia">   
-  <button class="buttonform" onclick="scrollToElement('form')" style="width:150px">Cosa ne pensi? </button>
+  <button class="buttonform" onclick="scrollToElement('form')" style="width:200px">Cosa ne pensi? </button>
 </div>
   <div class="striscia">   
   <div class="post-it-verde">
@@ -306,7 +307,7 @@
 
 
 <div class="strisciaex">
-    <button onclick="scrollToElement('form')" style="width:150px">Cosa ne pensi? </button>
+    <button onclick="scrollToElement('form')" style="width:200px">Cosa ne pensi? </button>
     <div class="post-it-verde">
       <p>Testo nel post-it</p>
     </div>
@@ -402,7 +403,8 @@
 
             spunti.forEach(function (spunto) {
                 var giornoSpunto = parseInt(spunto.getAttribute('data-giorno'));
-
+                console.log("Giorno spunto:", giornoSpunto);
+                 console.log("Giorni trascorsi:", giorniTrascorsi);
                 if (giornoSpunto <= giorniTrascorsi) {
                     spunto.style.display = 'block';
                 }
