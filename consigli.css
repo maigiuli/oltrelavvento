@@ -18,19 +18,16 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
-    display: none; 
 }
 
 .strisciaex {
     background-color: rgb(13, 29, 70);
     padding: 20px;
     color: #fff;
-    display: flex;
     justify-content: space-around;
     margin-bottom: 40px;
     position: relative;
     overflow: hidden;
-    display: none; 
 }
 
 
