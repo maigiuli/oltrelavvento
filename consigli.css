@@ -1,3 +1,42 @@
+/* Aggiungi questa sezione alla fine del tuo file CSS */
+
+.containerex::before,
+.strisciaex::before {
+    content: "Clicca qui"; /* Testo che verrà visualizzato al centro */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+    color: #fff; /* Colore del testo */
+    opacity: 0; /* Rende il testo inizialmente invisibile */
+    transition: opacity 0.3s ease;
+}
+
+.containerex:hover::before,
+.strisciaex:hover::before {
+    opacity: 1; /* Rende il testo visibile al passaggio del mouse */
+}
+
+
+.containerex {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #4DA69A;
+    border-radius: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  .strisciaex {
+    background-color: rgb(13, 29, 70); 
+    padding: 20px;
+    color: #fff; 
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+  }
+
+
 
 
 #visibleContent {
@@ -39,6 +78,7 @@
   #hiddenContent {
     display: none;
   }
+
 
   .striscia {
     background-color: rgb(13, 29, 70); 
@@ -169,7 +209,7 @@ nav li {
     margin: 0 auto; /* Aggiunge un po' di margine tra gli elementi del menu */
 }
 body {
-    font-family: Arial, sans-serif;
+   
     margin: 0;
     padding: 0;
      background-color: #DEDEDE;
@@ -220,7 +260,7 @@ input[type="email"] {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    width: 100%; /* Aggiunto per adattarsi al nuovo HTML */
+    width: 100%; 
 }
 
 #button:hover {
@@ -259,13 +299,9 @@ input[type="email"] {
 
 /* Aggiungi questo blocco di stile nel tuo foglio di stile CSS */
 nav ul li.special a {
-
-   
     width: 20%; 
-   
     color: #FFD0E8; /* Cambia il colore del testo a rosso */
-    font-size: 14px; /* Rendi il testo più grande */
-    /* Aggiungi effetto di scintillio */
+    font-size: 15px; 
     animation: sparkle 1s infinite alternate;
 }
 
@@ -394,3 +430,4 @@ nav ul li.special a {
     margin-top: 0px;
     color: #FFD0E8;
 }
+
