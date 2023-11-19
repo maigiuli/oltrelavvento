@@ -52,7 +52,18 @@
        <p> Oltrelavvento è un piccolo progetto dedicato a tutti quelli che nonostante l'età, non hanno ancora perso l'<strong>entusiasmo </strong>dell'aprire le porticine del calendario dell'avvento. </p>
        <p> Nelle porte di Oltrelavvento non ci sono cioccolatini, ma <strong> spunti </strong> tratti dall'arte, dalla musica, dal cinema, dalla storia. Il gioco è più divertente se lo facciamo insieme: ognuno potrà lasciare il suo <strong> pensiero</strong>, commento, riflessione, anche solo una frase o una parola nel form qua sotto, specificando a quale spunto si sta riferendo.    </p>
        <p> Periodicamente le vostre risposte compariranno sotto lo spunto corrispondente, consentendo uno <strong> scambio di idee </strong> arricchente per tutti.  </p>  
-     
+       <button onclick="showHiddenContent2()" style="width:150px; position: absolute; top: 80%; left: 50%; transform: translate(-50%, -50%);"> Regole del gioco </button>
+  
+    </div>
+  </div>
+
+  <div id="hiddenContent2">
+    <div class="field sfondo-custom">
+       <p> 1. Guarda lo spunto.  </p>
+       <p> 2. Cliccando sul pulsante "Cosa ne pensi?" verrai rediretto al form in cui puoi inserire il tuo commento, riflessione, osservazione o quant'altro, specificando il numero dello spunto. </p>
+       <p> 3. La tua risposta comparirà in seguito sotto il relativo spunto.   </p>     
+       <p> Q: Posso commentare lo spunto di un giorno successivo a quello corrente? R: Sì! Basta specificarlo nell'apposito campo del form. </p>  
+  
     </div>
   </div>
   
@@ -307,11 +318,12 @@
   </div>
     </div>
 
-        <div class="striscia">
-       <button class="buttonform" onclick="scrollToElement('form')" style="width:200px">Cosa ne pensi? </button>
+
+<div class="strisciaex">
+  <button onclick="scrollToElement('form')" style="width:200px">Cosa ne pensi? </button>
 </div>
-  <div class="striscia">
-    <div class="post-it-rosa">
+  <div class="strisciaex">
+   <div class="post-it-rosa">
       <p>Testo nel post-it</p>
     </div>
 
@@ -364,6 +376,12 @@
               document.getElementById('visibleContent').style.display = 'none';
               // Mostra il contenuto nascosto
               document.getElementById('hiddenContent').style.display = 'block';
+          }
+          function showHiddenContent2() {
+              // Nascondi il contenuto visibile
+              document.getElementById('hiddenContent').style.display = 'none';
+              // Mostra il contenuto nascosto
+              document.getElementById('hiddenContent2').style.display = 'block';
           }
           function showCele() {
               // Nascondi il contenuto visibile
