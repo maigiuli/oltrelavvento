@@ -273,6 +273,14 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: none;
   }
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #4DA69A;
+    border-radius: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
 
 h2 {
     text-align: center;
