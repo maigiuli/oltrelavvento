@@ -43,8 +43,8 @@
     <div id="visibleContent">
     
         <img src="images/wepik-export-20231116070418i98L.jpeg" alt="Descrizione immagine">
-        <button onclick="showHiddenContent()" style="width:150px; position: absolute; top: 90%; left: 60%; transform: translate(-50%, -50%);"> Come giocare </button>
-        <button onclick="scrollToElement('spunto1')" style="width:150px; position: absolute; top: 98%; left: 60%; transform: translate(-50%, -50%);"> Giochiamo !</button>
+        <button onclick="showHiddenContent()" style="width:150px; position: absolute; top: 90%; left: 50%; transform: translate(-50%, -50%);"> Come giocare </button>
+        <button onclick="scrollToElement('spunto1')" style="width:150px; position: absolute; top: 98%; left: 50%; transform: translate(-50%, -50%);"> Giochiamo!</button>
   </div>
 
     <div id="hiddenContent">
@@ -93,7 +93,9 @@
 </div>
   </div>
 </div>
-
+<div class="striscia">   
+  <button class="buttonform" onclick="scrollToElement('form')" style="width:150px">Cosa ne pensi? </button>
+</div>
 <div class="striscia">
   <div class="post-it-verde">
     <p>Testo nel post-it</p>
@@ -119,7 +121,9 @@
 </div>
   </div>
 </div>
-
+<div class="striscia">   
+  <button class="buttonform" onclick="scrollToElement('form')" style="width:150px">Cosa ne pensi? </button>
+</div>
 <div class="striscia">
   <div class="post-it-verde">
     <p>Testo nel post-it</p>
@@ -146,7 +150,9 @@
 </div>
   </div>
 </div>
-
+<div class="striscia">   
+  <button class="buttonform" onclick="scrollToElement('form')" style="width:150px">Cosa ne pensi? </button>
+</div>
 <div class="striscia">
   <div class="post-it-verde">
     <p>Testo nel post-it</p>
@@ -172,7 +178,9 @@
 </div>
   </div>
 </div>
-
+<div class="striscia">   
+  <button class="buttonform" onclick="scrollToElement('form')" style="width:150px">Cosa ne pensi? </button>
+</div>
 <div class="striscia">
   <div class="post-it-verde">
     <p>Testo nel post-it</p>
@@ -198,7 +206,9 @@
 </div>
   </div>
 </div>
-
+<div class="striscia">   
+  <button class="buttonform" onclick="scrollToElement('form')" style="width:150px">Cosa ne pensi? </button>
+</div>
 <div class="striscia">
   <div class="post-it-verde">
     <p>Testo nel post-it</p>
@@ -225,7 +235,9 @@
 </div>
   </div>
 </div>
-
+<div class="striscia">   
+  <button class="buttonform" onclick="scrollToElement('form')" style="width:150px">Cosa ne pensi? </button>
+</div>
 <div class="striscia">
   <div class="post-it-verde">
     <p>Testo nel post-it</p>
@@ -255,8 +267,11 @@
     </div>
 </div>
 
-<div class="striscia">
-    <div class="post-it-verde">
+<div class="striscia">   
+  <button class="buttonform" onclick="scrollToElement('form')" style="width:150px">Cosa ne pensi? </button>
+</div>
+  <div class="striscia">   
+  <div class="post-it-verde">
       <p>Testo nel post-it</p>
     </div>
 
@@ -273,6 +288,7 @@
   <div id="iniziale">
     <button onclick="showCele()" style="width:150px">Esempio </button>
   </div>
+
   <div id="cele"> 
     <div class="containerex" data-giorno="0">
     <div class="spunto">
@@ -284,12 +300,13 @@
     <a href="https://www.youtube.com/watch?v=0br10asYODk" target="_blank" class="link-frase"></a>
     <button class="ascolta-qui" onclick="redirectToLink('https://www.youtube.com/watch?v=HCyzGuipTd4')"><strong>Ascolta qui</strong></button>
   </div>
-
- 
     </div>
 </div>
 
+
+
 <div class="strisciaex">
+    <button onclick="scrollToElement('form')" style="width:150px">Cosa ne pensi? </button>
     <div class="post-it-verde">
       <p>Testo nel post-it</p>
     </div>
@@ -370,7 +387,7 @@
      
 
       <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        
         var dataInizio = new Date('2023-11-17');
         var oggi; 
         function mostraSpuntiCorrenti() {
@@ -380,8 +397,7 @@
             // Calcola i giorni trascorsi
             var giorniTrascorsi = Math.floor((oggi - dataInizio) / (1000 * 60 * 60 * 24));
 
-            
-             console.log("Giorni trascorsi:", giorniTrascorsi);
+            // Recupera tutti gli elementi container
             var spunti = document.querySelectorAll('.container');
 
             spunti.forEach(function (spunto) {
@@ -396,8 +412,6 @@
        
   
      mostraSpuntiCorrenti();
-        }); 
-
 </script>
 
 </body>
