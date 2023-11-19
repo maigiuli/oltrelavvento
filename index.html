@@ -43,8 +43,8 @@
     <div id="visibleContent">
     
         <img src="images/wepik-export-20231116070418i98L.jpeg" alt="Descrizione immagine">
-        <button onclick="showHiddenContent()" style="width:150px; position: absolute; top: 90%; left: 45%; transform: translate(-50%, -50%);"> Come giocare </button>
-        <button onclick="scrollToElement('spunto1')" style="width:150px; position: absolute; top: 98%; left: 45%; transform: translate(-50%, -50%);"> Giochiamo !</button>
+        <button onclick="showHiddenContent()" style="width:150px; position: absolute; top: 90%; left: 60%; transform: translate(-50%, -50%);"> Come giocare </button>
+        <button onclick="scrollToElement('spunto1')" style="width:150px; position: absolute; top: 98%; left: 60%; transform: translate(-50%, -50%);"> Giochiamo !</button>
   </div>
 
     <div id="hiddenContent">
@@ -82,7 +82,7 @@
 </div>
 
 
-<div class="container">
+<div class="container" data-giorno="7">
   <div class="spunto">
       <h2> Spunto #6</h2>
 <h2> Memory, Cats, Elaine Page (1998) </h2>
@@ -108,7 +108,7 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container" data-giorno="6">
   <div class="spunto">
       <h2> Spunto #6</h2>
 <h2> Machu Picchu, Perù</h2>
@@ -135,7 +135,7 @@
 </div>
 
 
-<div class="container">
+<div class="container" data-giorno="5">
   <div class="spunto">
       <h2> Spunto #5</h2>
 <h2> Al telefono, Franca Valeri (1967?) </h2>
@@ -161,7 +161,7 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container" data-giorno="4">
   <div class="spunto">
       <h2> Spunto #4</h2>
 <h2> Totò Peppino e la...malafemmina, Camillo Mastrocinque (1956) </h2>
@@ -187,7 +187,7 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container" data-giorno="3">
   <div class="spunto">
       <h2> Spunto #3</h2>
 <h2> Esiste il tempo?, Andrew Zimmerman Jones (2018) </h2>
@@ -214,7 +214,7 @@
 </div>
 
 
-<div class="container">
+<div class="container" data-giorno="2">
   <div class="spunto">
       <h2> Spunto #2</h2>
 <h2> Da dove veniamo? Chi siamo? Dove andiamo?, Paul Gauguin (1897) </h2>
@@ -240,7 +240,7 @@
   </div>
 </div>
 
-<div class="container" id="spunto1">
+<div class="container" id="spunto1" data-giorno="1">
     <div class="spunto">
         <h2> Spunto #1</h2>
 <h2> Volta la carta, Fabrizio de Andrè (1978) </h2>
@@ -270,7 +270,7 @@
   </div>
 
 
-  <div class="containerex" id="spunto1">
+  <div class="containerex" data-giorno="0">
     <div class="spunto">
         <h2> Spunto #0</h2>
 <h2> Azzurro, Adriano Celentano (1968) </h2>
@@ -278,24 +278,24 @@
 <div class="immagine-link">
     <img src="images/celentano-azzurro.jpg.webp" alt="Descrizione immagine">
     <a href="https://www.youtube.com/watch?v=0br10asYODk" target="_blank" class="link-frase"></a>
-    <button class="ascolta-qui" onclick="redirectToLink('https://www.youtube.com/watch?v=0br10asYODk')"><strong>Ascolta qui</strong></button>
+    <button class="ascolta-qui" onclick="redirectToLink('https://www.youtube.com/watch?v=HCyzGuipTd4')"><strong>Ascolta qui</strong></button>
   </div>
 
-    <div class="overlay">Esempio</div>
+  <div class="overlay">Esempio</div>
     </div>
 </div>
 
 <div class="strisciaex">
     <div class="post-it-verde">
-      <p>Ritmo coinvolgente e storia di tutti noi</p>
+      <p>Testo nel post-it</p>
     </div>
 
     <div class="post-it-rosa">
-      <p>Indimenticabile pezzo, che mette allegria e buonumore allo stesso tempo</p>
+      <p>Altro testo nel post-it</p>
     </div>
 
     <div class="post-it-verde">
-      <p>"Neanche un prete per chiacchierar": interessante che in passato si chiacchierava con i preti! </p>
+      <p>Altri contenuti</p>
     </div>
     <div class="overlay">Esempio</div>
   </div>
@@ -357,6 +357,38 @@
               }
             }
       </script>
+     
+
+      <script>
+        
+        var dataInizio = new Date('2023-11-16');
+
+        function mostraSpuntiCorrenti() {
+            // Ottieni la data corrente
+            var oggi = new Date();
+            
+            // Calcola i giorni trascorsi
+            var giorniTrascorsi = Math.floor((oggi - dataInizio) / (1000 * 60 * 60 * 24));
+
+            // Recupera tutti gli elementi container
+            var spunti = document.querySelectorAll('.container');
+
+            spunti.forEach(function (spunto) {
+                var giornoSpunto = parseInt(spunto.getAttribute('data-giorno'));
+
+                if (giornoSpunto <= giorniTrascorsi) {
+                    spunto.style.display = 'block';
+                }
+            });
+        }
+
+  
+     mostraSpuntiCorrenti();
+</script>
+
+</body>
+</html>
+
 </body>
 </html>
 
