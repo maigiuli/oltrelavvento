@@ -18,6 +18,12 @@
     opacity: 1; /* Rende il testo visibile al passaggio del mouse */
 }
 
+.containerex::before,
+.strisciaex::before {
+    user-select: none;
+    pointer-events: none;
+}
+
 
 .containerex {
     max-width: 600px;
