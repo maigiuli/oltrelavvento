@@ -110,10 +110,8 @@
     background-color: rgb(13, 29, 70); 
     padding: 20px;
     color: #fff; 
-    display: flex;
     justify-content: space-around;
     margin-bottom: 0px;
-
     margin-top: 0px;
   }
 
@@ -250,6 +248,7 @@ body {
     background-color: #4DA69A;
     border-radius: 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none; 
 }
 
 h2 {
