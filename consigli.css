@@ -8,6 +8,9 @@
     transition: background-color 0.3s ease;
 }
 
+#cele{
+    display: none;
+}
 
 .containerex {
     max-width: 600px;
