@@ -250,6 +250,7 @@ body {
     background-color: #4DA69A;
     border-radius: 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
   }
 
 h2 {
