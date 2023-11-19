@@ -1,29 +1,17 @@
-/* Aggiungi questa sezione alla fine del tuo file CSS */
 
-.containerex::before,
-.strisciaex::before {
-    content: "Clicca qui"; /* Testo che verrà visualizzato al centro */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 1.5em;
-    color: #fff; /* Colore del testo */
-    opacity: 0; /* Rende il testo inizialmente invisibile */
-    transition: opacity 0.3s ease;
+
+.containerex:hover,
+.strisciaex:hover {
+    background-color:#4DA69A;
+      opacity: 0.5; 
+    content: "Esempio"; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(13, 29, 70); 
+    font-size: 1.5em; 
+    z-index: 1; /* Assicura che l'elemento pseudo sia sopra gli altri contenuti */
 }
-
-.containerex:hover::before,
-.strisciaex:hover::before {
-    opacity: 1; /* Rende il testo visibile al passaggio del mouse */
-}
-
-.containerex::before,
-.strisciaex::before {
-    user-select: none;
-    pointer-events: none;
-}
-
 
 .containerex {
     max-width: 600px;
@@ -41,6 +29,8 @@
     justify-content: space-around;
     margin-bottom: 40px;
   }
+
+
 
 
 
