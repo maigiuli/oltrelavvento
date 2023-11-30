@@ -13,7 +13,7 @@
 
   /* Style for checked checkboxes */
   input[type="checkbox"]:checked {
-    background-color: #4DA69A;
+    background-color:  #FFD0E8;
     border: 2px solid rgb(13, 29, 70);
   }
 
