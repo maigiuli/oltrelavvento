@@ -5,13 +5,22 @@
         <title>
             Oltrelasiepe
         </title>
-        <link rel="stylesheet" type="text/css" href="consigli.css"/>
+        <link rel="stylesheet" type="text/css" href="oltreADV.css"/>
         
         
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
    
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TVTTM3X4QD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TVTTM3X4QD');
+</script>
 
     <body>
         
@@ -42,31 +51,233 @@
 
     <div id="visibleContent">
     
-        <img src="images/wepik-export-20231116070418i98L.jpeg" alt="Descrizione immagine">
-        <button onclick="showHiddenContent()" style="width:150px; position: absolute; top: 70%; left: 50%; transform: translate(-50%, -50%);"> Come giocare </button>
-        <button onclick="scrollToElement('spunto1')" style="width:150px; position: absolute; top: 78%; left: 50%; transform: translate(-50%, -50%);"> Giochiamo!</button>
+          <div class="field sfondo-custom2">
+              <p style="margin: 0;"> <span style="color: #354F08;"> Un piccolo progetto per chi ha ancora </span> </p>
+               <p style="margin: 0;"> <span style="color: #354F08;"> voglia di aprire le porticine del calendario dell’avvento...  </span> </p>
+                <p style="margin-top: 0;"> <span style="color: #354F08;"> ma senza trovarci cioccolatini. </span></p>
+             <p> <span style="color:  #354F08;"> <strong> Apriamo le porte alle idee! </span> </strong></p>
+              <p> <span style="color: #9C1018;"> <strong> dall’1 dicembre su oltrelasiepe.net </strong></span></p>
+                <button class="iscriviti-qui" onclick="redirectToLink('https://whatsapp.com/channel/0029VaEc02c35fLp9BXAk00O')">Segui il canale WhatsApp</button>
+
+              
+            <button onclick="showHiddenContent()" style="width:150px; position: absolute; top: 80%; left: 50%; transform: translate(-50%, -50%);"> Scopri di più!   </button> 
+  </div>
   </div>
 
     <div id="hiddenContent">
-    <div class="field sfondo-custom">
+    <div class="field sfondo-custom" id="sfondoCustom">
        <p> Oltrelavvento è un piccolo progetto dedicato a tutti quelli che nonostante l'età, non hanno ancora perso l'<strong>entusiasmo </strong>dell'aprire le porticine del calendario dell'avvento. </p>
-       <p> Nelle porte di Oltrelavvento non ci sono cioccolatini, ma <strong> spunti </strong> tratti dall'arte, dalla musica, dal cinema, dalla storia. Il gioco è più divertente se lo facciamo insieme: ognuno potrà lasciare il suo <strong> pensiero</strong>, commento, riflessione, anche solo una frase o una parola nel form qua sotto, specificando a quale spunto si sta riferendo.    </p>
-       <p> Periodicamente le vostre risposte compariranno sotto lo spunto corrispondente, consentendo uno <strong> scambio di idee </strong> arricchente per tutti.  </p>  
-       <button onclick="showHiddenContent2()" style="width:150px; position: absolute; top: 80%; left: 50%; transform: translate(-50%, -50%);"> Regole del gioco </button>
+       <p> Nelle porte di Oltrelavvento non ci sono cioccolatini, ma <strong> spunti </strong> tratti dall'arte, dalla musica, dal cinema, dalla storia. Il gioco è più divertente se lo facciamo insieme: ognuno potrà lasciare il suo <strong> pensiero</strong>, commento, riflessione, anche solo una frase o una parola nel form apposito, specificando a quale spunto si sta riferendo.    </p>
+       <p> Periodicamente le vostre risposte compariranno sotto lo spunto corrispondente, in uno <strong> scambio di idee </strong> arricchente per tutti.  </p>  
+       <button onclick="showHiddenContent2()" style="width:150px; position: absolute; top: 80%; left: 50%; transform: translate(-50%, -50%);"> Come partecipare </button>
   
     </div>
   </div>
 
   <div id="hiddenContent2">
-    <div class="field sfondo-custom">
+    <div class="field sfondo-custom" id="sfondoCustom2">
        <p> 1. Guarda, ascolta, esplora lo spunto.  </p>
        <p> 2. Cliccando sul pulsante "Cosa ne pensi?" verrai rediretto al form in cui puoi inserire il tuo commento, riflessione, osservazione o quant'altro, specificando il numero dello spunto. </p>
        <p> 3. La tua risposta comparirà in seguito sotto il relativo spunto.   </p>     
-     
        <p> 4. Posso commentare lo spunto di un giorno successivo o precedente a quello corrente? Sì! Basta specificarlo nell'apposito campo del form. </p>  
   
     </div>
   </div>
+
+<!-- Esempio -->    
+  <div id="iniziale">
+    <button onclick="showCele()" style="width:150px, height:200px">Esempio </button>
+  </div>
+
+  <div id="cele"> 
+    <div class="containerex" data-giorno="0">
+    <div class="spunto">
+        <h2> Spunto #0</h2>
+        <h2> Azzurro, Adriano Celentano (1968) </h2>
+     <div class="immagine-link">
+    <img src="images/celentano-azzurro.jpg.webp" alt="Descrizione immagine">
+    <a href="https://www.youtube.com/watch?v=0br10asYODk" target="_blank" class="link-frase"></a>
+    <button class="ascolta-qui" onclick="redirectToLink('https://www.youtube.com/watch?v=HCyzGuipTd4')"><strong>Ascolta qui</strong></button>
+  </div>
+    </div>
+<div class="striscia">
+ <button class="buttonform" onclick="scrollToElement('form')" style="width:200px">Cosa ne pensi? </button>
+</div>
+  <div class="striscia">
+   <div class="post-it-rosa">
+      <p> Bella canzone! Povero Celentano, neanche un prete per chiacchierare era rimasto in città...</p>
+    </div>
+
+    <div class="post-it-rosa">
+      <p> Ma se si annoiava perchè non è partito per le spiagge con lei?  </p>
+    </div>
+
+    <div class="post-it-rosa">
+      <p> Interessante che il pomeriggio è "azzurro" perchè proprio questo colore? </p>
+    </div>
+
+    <div class="post-it-rosa">
+      <p> Il Blu di Modugno e l'Azzurro di Celentano, la sfumatura cromatica accomuna queste due canzoni, tra le più famose nel mondo </p>
+    </div>
+
+    <div class="post-it-rosa">
+      <p> Canzone bellissima, però consiglio di godersi l'azzurro della natura e la compagnia di se stessi, senza che il proprio benessere dipenda dalla presenza di un'altra persona! </p>
+    </div>
+      
+
+    <div class="post-it-rosa">
+      <p> Bello </p>
+    </div>
+      
+       <div class="post-it-rosa">
+      <p> La cantavo sempre con mia mamma quando ero piccola! </p>
+    </div>
+      
+       <div class="post-it-rosa">
+      <p> La colonna sonora di tanti momenti belli... </p>
+    </div>
+    
+  </div>
+</div>
+</div>
+<!-- Spunti -->    
+
+
+     <div class="container" data-giorno="10">
+  <div class="spunto">
+      <h2> Spunto #10</h2>
+<h2> La scoperta della J/Psi (1974) </h2>
+<h2> I fisici dell'esperimento Adone dei Laboratori di Frascati </h2>
+      
+
+<div class="immagine-link">
+  <img src="images/frascati.png" alt="Descrizione immagine">
+  <button class="ascolta-qui" onclick="redirectToLink('https://www.youtube.com/watch?v=osCDYEmhUJk')"><strong>Guarda qui</strong></button>
+</div>
+  </div>
+
+<div class="striscia">   
+  <button class="buttonform" onclick="scrollToElement('form')" style="width:200px">Cosa ne pensi? </button>
+</div>
+<div class="striscia">
+  <div class="post-it-rosa">
+    <p>Testo nel post-it</p>
+  </div>
+
+  <div class="post-it-rosa">
+    <p>Altro testo nel post-it</p>
+  </div>
+
+  <div class="post-it-rosa">
+    <p>Altri contenuti</p>
+  </div>
+</div>
+</div>
+             
+        
+        <div class="container" data-giorno="9">
+  <div class="spunto">
+      <h2> Spunto #9</h2>
+<h2> Le ragazze (2023) </h2>
+      
+<h2> I Neri per caso, Paola Cortellesi, Emanuela Fanelli, Geppi Cucciari e Carla Signoris  </h2>
+
+<div class="immagine-link">
+  <img src="images/ragazze.png" alt="Descrizione immagine">
+  <button class="ascolta-qui" onclick="redirectToLink('https://www.youtube.com/watch?v=JCJVe-Bzxcc')"><strong>Ascolta qui</strong></button>
+</div>
+  </div>
+
+<div class="striscia">   
+  <button class="buttonform" onclick="scrollToElement('form')" style="width:200px">Cosa ne pensi? </button>
+</div>
+<div class="striscia">
+  <div class="post-it-rosa">
+    <p>Testo nel post-it</p>
+  </div>
+
+  <div class="post-it-rosa">
+    <p>Altro testo nel post-it</p>
+  </div>
+
+  <div class="post-it-rosa">
+    <p>Altri contenuti</p>
+  </div>
+</div>
+</div>
+        
+<div class="container" data-giorno="8">
+  <div class="spunto">
+      <h2> Spunto #8</h2>
+<h2> Ho amato tutto, Tosca (2020) </h2>
+
+<div class="immagine-link">
+  <img src="images/tosca.png" alt="Descrizione immagine">
+  <button class="ascolta-qui" onclick="redirectToLink('https://www.youtube.com/watch?v=lM04HIC3NL8')"><strong>Ascolta qui</strong></button>
+</div>
+  </div>
+
+<div class="striscia">   
+  <button class="buttonform" onclick="scrollToElement('form')" style="width:200px">Cosa ne pensi? </button>
+</div>
+<div class="striscia">
+  <div class="post-it-rosa">
+    <p>Testo nel post-it</p>
+  </div>
+
+  <div class="post-it-rosa">
+    <p>Altro testo nel post-it</p>
+  </div>
+
+  <div class="post-it-rosa">
+    <p>Altri contenuti</p>
+  </div>
+</div>
+</div>
+        <div class="container" data-giorno="7">
+  <div class="spunto">
+      <h2> Settimana #1</h2>
+<h2> Quale spunto ti è piaciuto di più? </h2>
+<p style="font-style: italic;"> Puoi selezionare quanti spunti vuoi</p>
+
+<div class="immagine-link">
+  <img src="images/quest.webp" alt="Descrizione immagine" style="width: 300px; height: auto;">
+</div>
+  </div>
+
+  <form id="surveyForm">
+    <div class="field">
+      <label for="user_email">Nome: </label>
+      <input type="text" name="user_email" id="user_email">
+    </div>
+          <div class="field">
+      <label for="7">Spunto 7 -Memory, Cats, Elaine Page </label> <input type="checkbox" id="7" name="7">
+  </div>
+      
+    <div class="field">
+      <label for="6">Spunto 6 -Memory, Cats, Elaine Page </label> <input type="checkbox" id="6" name="6">
+  </div>
+    <div class="field">
+      <label for="5">Spunto 5 - Al telefono Franca Valeri </label> <input type="checkbox" id="5" name="5">
+  </div>
+    <div class="field">
+      <label for="4">Spunto 4 - Totò Peppino e la...malafemmina </label> <input type="checkbox" id="4" name="4">
+  </div>
+     <div class="field">
+      <label for="3">Spunto 3 - Esiste il tempo? </label> <input type="checkbox" id="3" name="3">
+  </div>
+    <div class="field">
+      <label for="2">Spunto 2 - Chi siamo? Dove andiamo? Da dove veniamo? </label> <input type="checkbox" id="2" name="2">
+  </div>
+     <div class="field">
+      <label for="1">Spunto 1 - Volta la carta </label> <input type="checkbox" id="1" name="1">
+  </div>
+    <button type="submit" class="buttonform" onclick="submitSurvey()"> <strong> Invia </strong></button>
+
+</form>
+
+</div>
+        
 
 
 <div class="container" data-giorno="7">
@@ -252,12 +463,8 @@
     <img src="images/deandre.jpeg" alt="Descrizione immagine">
     <a href="https://www.youtube.com/watch?v=0br10asYODk" target="_blank" class="link-frase"></a>
     <button class="ascolta-qui" onclick="redirectToLink('https://www.youtube.com/watch?v=0br10asYODk')"><strong>Ascolta qui</strong></button>
-  </div>
-
-
-    </div>
-
-
+</div>
+</div>
 <div class="striscia">   
   <button class="buttonform" onclick="scrollToElement('form')" style="width:200px">Cosa ne pensi? </button>
 </div>
@@ -276,52 +483,19 @@
   </div>
 </div>
 
-  <div id="iniziale">
-    <button onclick="showCele()" style="width:150px">Esempio </button>
-  </div>
-
-  <div id="cele"> 
-    <div class="containerex" data-giorno="0">
-    <div class="spunto">
-        <h2> Spunto #0</h2>
-<h2> Azzurro, Adriano Celentano (1968) </h2>
-
-<div class="immagine-link">
-    <img src="images/celentano-azzurro.jpg.webp" alt="Descrizione immagine">
-    <a href="https://www.youtube.com/watch?v=0br10asYODk" target="_blank" class="link-frase"></a>
-    <button class="ascolta-qui" onclick="redirectToLink('https://www.youtube.com/watch?v=HCyzGuipTd4')"><strong>Ascolta qui</strong></button>
-  </div>
-    </div>
 
 
-<div class="striscia">
- <button class="buttonform" onclick="scrollToElement('form')" style="width:200px">Cosa ne pensi? </button>
-</div>
-  <div class="striscia">
-   <div class="post-it-rosa">
-      <p>Testo nel post-it</p>
-    </div>
+        
 
-    <div class="post-it-rosa">
-      <p>Altro testo nel post-it</p>
-    </div>
 
-    <div class="post-it-rosa">
-      <p>Altri contenuti</p>
-    </div>
-    
-  </div>
-</div>
-</div>
 
-  
+
+<!-- Form -->    
 <div class="container2">
   <form id="form">
       <h2>Cosa ne pensi?</h2>
-   
-
   <div class="field">
-    <label for="pensieri"> Parole, pensieri, opinioni, commenti e riflessioni riguardo gli spunti: 
+    <label for="pensieri"> Parole, pensieri, opinioni, commenti e riflessioni riguardo lo spunto: 
     </label>
     <input type="text" name="pensieri" id="pensieri">
   </div>
@@ -330,7 +504,7 @@
     <input type="text" name="day" id="day">
   </div>
     <div class="field">
-    <label for="user_email">Nome o Email: </label>
+    <label for="user_email">Nome: </label>
     <input type="text" name="user_email" id="user_email">
   </div>
 
@@ -343,43 +517,56 @@
 
 
 
+        
 
 
-    </main>
+
+
+
+
+        
+
+
+
+</main>
 
    
 
-    <div class="social-strip">
-        <a href="https://www.facebook.com/giulia.maineri.9/" target="_blank">
-            <img src="images/fb.png" alt="Facebook" />
-        </a>
-        <a href="https://www.instagram.com/mai.giuly/" target="_blank">
-            <img src="images/insta-removebg-preview.png" alt="Instagram" />
-        </a>
-        <a href="https://github.com/maigiuli" target="_blank">
-            <img src="images/git.png" alt="git" />
-        </a>
-        <a href="https://www.linkedin.com/in/giulia-maineri-9a687b21a/" target="_blank">
-                <img src="images/linkedin.png" alt="linkedin" />
-        
-    </div>
-    <div class="mail">
-        <a href="mailto:maineri.giulia@gmail.com" style="color: #FFD0E8;text-decoration: none;">maineri.giulia@gmail.com</a>
-    </div>
+<div class="social-strip">
+    <a href="https://www.facebook.com/giulia.maineri.9/" target="_blank">
+        <img src="images/fb.png" alt="Facebook" />
+    </a>
+    <a href="https://www.instagram.com/mai.giuly/" target="_blank">
+        <img src="images/insta-removebg-preview.png" alt="Instagram" />
+    </a>
+    <a href="https://github.com/maigiuli" target="_blank">
+        <img src="images/git.png" alt="git" />
+    </a>
+    <a href="https://www.linkedin.com/in/giulia-maineri-9a687b21a/" target="_blank">
+            <img src="images/linkedin.png" alt="linkedin" />
+    
+</div>
+<div class="mail">
+    <a href="mailto:maineri.giulia@gmail.com" style="color: #FFD0E8;text-decoration: none;">maineri.giulia@gmail.com</a>
+</div>
 
 
 
-    </div>
-          <script> 
+</div>
+         <script> 
             function showHiddenContent() {
               // Nascondi il contenuto visibile
               document.getElementById('visibleContent').style.display = 'none';
+                
+              document.getElementById('sfondoCustom').style.display = 'flex';
               // Mostra il contenuto nascosto
               document.getElementById('hiddenContent').style.display = 'block';
           }
           function showHiddenContent2() {
               // Nascondi il contenuto visibile
               document.getElementById('hiddenContent').style.display = 'none';
+              
+                document.getElementById('sfondoCustom2').style.display = 'flex';
               // Mostra il contenuto nascosto
               document.getElementById('hiddenContent2').style.display = 'block';
           }
@@ -410,7 +597,7 @@
 
       <script>
         
-        var dataInizio = new Date('2023-11-17');
+        var dataInizio = new Date('2023-11-01');
         var oggi; 
         function mostraSpuntiCorrenti() {
             // Ottieni la data corrente
@@ -439,7 +626,3 @@
 
 </body>
 </html>
-
-</body>
-</html>
-
