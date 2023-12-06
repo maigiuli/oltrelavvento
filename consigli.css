@@ -4,7 +4,8 @@
   }
 
   .field img {
-    max-width: 50px; /* Imposta la larghezza massima dell'immagine */
+    width: 30px;
+    
     margin-right: 10px; /* Aggiunge uno spazio a destra dell'immagine */
   }
 
