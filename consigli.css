@@ -1,4 +1,13 @@
- /* Style for checkboxes */
+  .field {
+    display: flex;
+    align-items: center;
+  }
+
+  .field img {
+    max-width: 50px; /* Imposta la larghezza massima dell'immagine */
+    margin-right: 10px; /* Aggiunge uno spazio a destra dell'immagine */
+  }
+
  input[type="checkbox"] {
     appearance: none;
     -webkit-appearance: none;
