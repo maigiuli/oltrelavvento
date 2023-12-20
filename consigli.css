@@ -1,29 +1,39 @@
 
+
 .week-strip {
-    display: flex;
-    flex-direction: row;
     background-color: #7FFFD4; /* Colore verde acqua */
+    display: flex;
+    align-items: center; /* Centra verticalmente il contenuto */
+    height: 100vh; /* Altezza della strip al 100% della viewport height */
 }
 
 .week-strip h2 {
     text-align: center;
-    margin: 0; /* Rimuove il margine del titolo */
-    padding: 20px; /* Aggiunge spaziatura al titolo */
+    margin: 0;
+    padding: 20px;
 }
 
-.large-image, .small-images {
-    flex: 1;
-    padding: 20px; /* Aggiunge spaziatura alle immagini */
-    box-sizing: border-box; /* Garantisce che il padding non aumenti la larghezza totale */
+.left-images {
+    flex: 1; /* Occupa la metà sinistra */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.right-image {
+    flex: 1; /* Occupa la metà destra */
+    padding: 20px;
+    text-align: center;
 }
 
 .small-image {
+    flex: 1; /* Occupa l'intera larghezza della colonna */
     margin-bottom: 10px;
 }
-.strip {
-    background-color: #4DA69A;
-    padding: 20px;
-    overflow: auto;
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 .box {
