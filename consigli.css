@@ -1,3 +1,25 @@
+
+.week-strip {
+    display: flex;
+    flex-direction: row;
+    background-color: #7FFFD4; /* Colore verde acqua */
+}
+
+.week-strip h2 {
+    text-align: center;
+    margin: 0; /* Rimuove il margine del titolo */
+    padding: 20px; /* Aggiunge spaziatura al titolo */
+}
+
+.large-image, .small-images {
+    flex: 1;
+    padding: 20px; /* Aggiunge spaziatura alle immagini */
+    box-sizing: border-box; /* Garantisce che il padding non aumenti la larghezza totale */
+}
+
+.small-image {
+    margin-bottom: 10px;
+}
 .strip {
     background-color: #4DA69A;
     padding: 20px;
