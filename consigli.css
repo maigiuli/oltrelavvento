@@ -1,4 +1,23 @@
-  .field_q {
+.strip {
+    background-color: #4DA69A;
+    padding: 20px;
+    overflow: auto;
+}
+
+.box {
+    width: 30%;
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+    background-color: #4DA69A;
+}
+
+.box img {
+    max-width: 70%;
+    height: auto;
+}
+
+.field_q {
     display: flex;
     align-items: center;
   }
