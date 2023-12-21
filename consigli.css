@@ -1,12 +1,26 @@
 
 
 .week-strip {
-    background-color: #7FFFD4; /* Colore verde acqua */
+    background-color:#4DA69A; /* Colore verde acqua */
     display: flex;
     align-items: center; /* Centra verticalmente il contenuto */
     height: 100vh; /* Altezza della strip al 100% della viewport height */
 }
+.week-strip2 {
+    background-color: #FFD0E8;
+    /* Colore verde acqua */
+    display: flex;
+    align-items: center;
+    /* Centra verticalmente il contenuto */
+    height: 100vh;
+    /* Altezza della strip al 100% della viewport height */
+}
 
+.week-strip2 h2 {
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
 .week-strip h2 {
     text-align: center;
     margin: 0;
