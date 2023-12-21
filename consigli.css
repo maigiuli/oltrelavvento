@@ -14,20 +14,21 @@
 }
 
 .left-images {
-    flex: 1; /* Occupa la metà sinistra */
+    flex: 1; 
     display: flex;
     flex-direction: column;
     padding: 20px;
 }
 
 .right-image {
-    flex: 1; /* Occupa la metà destra */
+    flex: 1; /
     padding: 20px;
     text-align: center;
 }
 
 .small-image {
     flex: 1; /* Occupa l'intera larghezza della colonna */
+     max-width: 70%;
     margin-bottom: 10px;
 }
 
