@@ -1,4 +1,11 @@
-.week-strip {
+ video {
+     max-width: 100%;
+    
+     height: auto;
+    align-items: center;
+    
+ }
+ .week-strip {
     background-color: #4DA69A;
     /* Colore verde acqua */
     display: flex;
