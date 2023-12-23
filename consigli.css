@@ -64,17 +64,14 @@
 
  .box {
      width: 30%;
-     height: 200px;
-     /* Imposta l'altezza desiderata per tutte le caselle */
+     height: 400px;
      display: inline-block;
      text-align: center;
      margin: 0;
-     /* Elimina il margine per evitare spazi tra le caselle */
      background-color: #4DA69A;
      border: 2px solid rgb(13, 29, 70);
-     /* Usa il colore specifico per la cornice */
      box-sizing: border-box;
-     /* Include il padding e il bordo nelle dimensioni totali */
+
  }
 
  .box img {
