@@ -1,7 +1,10 @@
- .strip {
-     text-align: center;
- }
-
+.strip {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
 
  video {
      max-width: 100%;
@@ -13,10 +16,10 @@
 
  .week-strip {
      background-color: #4DA69A;
-     /* Colore verde acqua */
+    
      display: flex;
      align-items: center;
-     /* Centra verticalmente il contenuto */
+    
      height: 100vh;
      /* Altezza della strip al 100% della viewport height */
  }
