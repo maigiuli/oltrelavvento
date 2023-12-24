@@ -870,8 +870,12 @@
                   src: dataPoint.image,
                   x: dataPoint.x,
                   y: dataPoint.y,
-                  width: 30, // Larghezza dell'immagine
-                  height: 30, // Altezza dell'immagine
+                  width: 30,
+                  height: 30,
+                  click: function (e) {
+                    // Aggiungi il codice che vuoi eseguire quando l'immagine viene cliccata
+                    console.log('Immagine cliccata:', dataPoint.image);
+                  }
                 };
               })
             }
