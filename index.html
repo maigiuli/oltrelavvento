@@ -860,9 +860,8 @@
                 position: 'left'
               }]
             },
-            annotation: {
+           annotation: {
               drawTime: 'afterDatasetsDraw',
-              events: ['click'],
               annotations: data.map(function (dataPoint) {
                 return {
                   type: 'image',
@@ -872,13 +871,13 @@
                   y: dataPoint.y,
                   width: 30,
                   height: 30,
-                  click: function (e) {
-                    // Aggiungi il codice che vuoi eseguire quando l'immagine viene cliccata
+                  events: ['click'],
+                  click: function (event) {
                     console.log('Immagine cliccata:', dataPoint.image);
-                  }
+                  },
                 };
-              })
-            }
+              }),
+            },
           }
         });
 </script>
