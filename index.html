@@ -838,45 +838,46 @@
       { x: 10, y: 2009, image: 'images/ragazze.png' },
     ];
 
-    var myChart = new Chart(ctx, {
-      type: 'scatter',
-      data: {
-        datasets: [{
-          label: 'Punti del grafico',
-          data: data,
-          borderColor: 'transparent', // Colore del bordo trasparente
-          backgroundColor: 'transparent', // Colore di sfondo trasparente
-          pointStyle: data.map(function (dataPoint) {
-            return {
-              render: function (context, point) {
-                var img = new Image();
-                img.src = dataPoint.image;
-                var width = 30; // Larghezza dell'immagine
-                var height = 30; // Altezza dell'immagine
-                context.drawImage(img, point.x - width / 2, point.y - height / 2, width, height);
-              }
-            };
-          }),
-        }]
-      },
-      options: {
-        scales: {
-          xAxes: [{
-            type: 'linear',
-            position: 'bottom'
-          }],
-          yAxes: [{
-            type: 'linear',
-            position: 'left'
-            ticks: {
-              min: 1950,  // Imposta il valore minimo dell'asse y
-              max: 2020   // Imposta il valore massimo dell'asse y
-            }
+     var myChart = new Chart(ctx, {
+        type: 'scatter',
+        data: {
+          datasets: [{
+            label: 'Punti del grafico',
+            data: data,
+            borderColor: 'transparent',
+            backgroundColor: 'transparent',
+            pointStyle: data.map(function (dataPoint) {
+              return {
+                render: function (context, point) {
+                  var img = new Image();
+                  img.src = dataPoint.image;
+                  var width = 30;
+                  var height = 30;
+                  context.drawImage(img, point.x - width / 2, point.y - height / 2, width, height);
+                }
+              };
+            }),
+            pointRadius: 5, // Dimensione dei punti
           }]
         },
-       
-      }
-    });
+        options: {
+          scales: {
+            xAxes: [{
+              type: 'linear',
+              position: 'bottom'
+            }],
+            yAxes: [{
+              type: 'linear',
+              position: 'left',
+              ticks: {
+                min: 1950,
+                max: 2020
+              }
+            }]
+          }
+        }
+      });
+
   </script>
 
 </body>
