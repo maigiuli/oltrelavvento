@@ -820,72 +820,70 @@
   </script>
 
   <script>
-    // Inizializza il grafico utilizzando Chart.js
-    var ctx = document.getElementById('myChart').getContext('2d');
-     var data = [
+     var ctx = document.getElementById('myChart').getContext('2d');
+
+      // Aggiungi l'array di oggetti con le coordinate x, y e il percorso dell'immagine
+      var data = [
         { x: 1, y: 80, image: 'images/laura.png' },
         { x: 2, y: 60, image: 'images/jannacci.png' },
         // ... Altri punti ...
         { x: 6, y: 60, image: 'images/jannacci.png' }
       ];
-var myChart = new Chart(ctx, {
-      type: 'scatter', // Tipo di grafico (puoi cambiare a seconda delle tue esigenze)
-      data: {
-        datasets: [{
-          label: 'Timeline',
-          data: data, 
-          pointRadius: 0, // Dimensione dei punti
-        }]
-      },
-      options: {
-        scales: {
-          x: {
-            type: 'linear',
-            position: 'bottom'
+
+      var myChart = new Chart(ctx, {
+        type: 'scatter', // Tipo di grafico (puoi cambiare a seconda delle tue esigenze)
+        data: {
+          datasets: [{
+            label: 'Punti del grafico',
+            data: data,
+            pointRadius: 0, // Imposta la dimensione dei punti a 0
+          }]
+        },
+        options: {
+          scales: {
+            x: {
+              type: 'linear',
+              position: 'bottom'
+            },
+            y: {
+              type: 'linear',
+              position: 'left'
+            }
           },
-          y: {
-            type: 'linear',
-            position: 'left'
+          plugins: {
+            tooltip: {
+              callbacks: {
+                label: function (context) {
+                  var dataPoint = data[context.dataIndex];
+                  return [dataPoint.x, dataPoint.y];
+                },
+                afterLabel: function (context) {
+                  var dataPoint = data[context.dataIndex];
+                  return ['Image: ' + dataPoint.image];
+                },
+                // Utilizza la funzione di visualizzazione personalizzata per mostrare un'immagine
+                labelColor: function (context) {
+                  return {
+                    borderColor: 'transparent',
+                    backgroundColor: 'transparent'
+                  };
+                },
+                afterDraw: function (context, element) {
+                  var image = new Image();
+                  image.src = data[context.dataIndex].image;
+
+                  // Imposta la posizione dell'immagine sulla tooltip
+                  var x = element.x + context.chart.canvas.offsetLeft - image.width / 2;
+                  var y = element.y + context.chart.canvas.offsetTop - image.height - 10;
+
+                  // Disegna l'immagine sulla tooltip
+                  context.chart.ctx.drawImage(image, x, y, image.width, image.height);
+                }
+              }
+            }
           }
         }
-      }, 
-  plugins: {
-    tooltip: {
-      callbacks: {
-        label: function (context) {
-          var dataPoint = data[context.dataIndex];
-          return [dataPoint.x, dataPoint.y];
-        },
-        afterLabel: function (context) {
-          var dataPoint = data[context.dataIndex];
-          return ['Image: ' + dataPoint.image];
-        },
-        // Utilizza la funzione di visualizzazione personalizzata per mostrare un'immagine
-        labelColor: function (context) {
-          return {
-            borderColor: 'transparent',
-            backgroundColor: 'transparent'
-          };
-        },
-        afterDraw: function (context, element) {
-          var image = new Image();
-          image.src = data[context.dataIndex].image;
-
-          // Imposta la posizione dell'immagine sulla tooltip
-          var x = element.x + context.chart.canvas.offsetLeft - image.width / 2;
-          var y = element.y + context.chart.canvas.offsetTop - image.height - 10;
-
-          // Disegna l'immagine sulla tooltip
-          context.chart.ctx.drawImage(image, x, y, image.width, image.height);
-        }
-      }
-    }
-  }
-
-
-
-
-    });
+      });
   </script>
 
 </body>
