@@ -835,7 +835,10 @@
 
     var myChart = new Chart(ctx, {
       type: 'scatter', // Tipo di grafico (puoi cambiare a seconda delle tue esigenze)
-      data: data,
+      data:  {
+        datasets: [{
+          label: 'Punti del grafico',
+          data: data,
       showLine: false,
       pointStyle: function (context) {
         var img = new Image();
