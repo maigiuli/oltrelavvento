@@ -838,45 +838,55 @@
       { x: 10, y: 2009, image: 'images/ragazze.png' },
     ];
 
-     var myChart = new Chart(ctx, {
-        type: 'scatter',
-        data: {
-          datasets: [{
-            label: 'Punti del grafico',
-            data: data,
-            borderColor: 'transparent',
-            backgroundColor: 'transparent',
-            pointStyle: data.map(function (dataPoint) {
-              return {
-                render: function (context, point) {
-                  var img = new Image();
-                  img.src = dataPoint.image;
-                  var width = 30;
-                  var height = 30;
-                  context.drawImage(img, point.x - width / 2, point.y - height / 2, width, height);
-                }
-              };
-            }),
-            pointRadius: 5, // Dimensione dei punti
-          }]
-        },
-        options: {
-          scales: {
-            xAxes: [{
-              type: 'linear',
-              position: 'bottom'
-            }],
-            yAxes: [{
-              type: 'linear',
-              position: 'left',
-              ticks: {
-                min: 1950,
-                max: 2020
-              }
-            }]
+    var loadedImages = 0;
+      var totalImages = data.length;
+
+
+  var myChart = new Chart(ctx, {
+    type: 'scatter',
+    data: {
+      datasets: [{
+        label: 'Punti del grafico',
+        data: data,
+        borderColor: 'transparent',
+        backgroundColor: 'transparent',
+        pointStyle: data.map(function (dataPoint) {
+          var img = new Image();
+          img.src = dataPoint.image;
+          img.onload = function () {
+            loadedImages++;
+            if (loadedImages === totalImages) {
+              myChart.update(); // Aggiorna il grafico quando tutte le immagini sono caricate
+            }
+          };
+          return {
+            render: function (context, point) {
+              var width = 30;
+              var height = 30;
+              context.drawImage(img, point.x - width / 2, point.y - height / 2, width, height);
+            }
+          };
+        }),
+        pointRadius: 5,
+      }]
+    },
+    options: {
+      scales: {
+        xAxes: [{
+          type: 'linear',
+          position: 'bottom'
+        }],
+        yAxes: [{
+          type: 'linear',
+          position: 'left',
+          ticks: {
+            min: 1950,
+            max: 2020
           }
-        }
-      });
+        }]
+      }
+    }
+  });
 
   </script>
 
