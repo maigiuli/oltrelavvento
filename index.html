@@ -858,26 +858,13 @@
           yAxes: [{
             type: 'linear',
             position: 'left'
+            ticks: {
+              min: 1950,  // Imposta il valore minimo dell'asse y
+              max: 2020   // Imposta il valore massimo dell'asse y
+            }
           }]
         },
-        annotation: {
-          drawTime: 'afterDatasetsDraw',
-          annotations: data.map(function (dataPoint) {
-            return {
-              type: 'image',
-              id: dataPoint.image,
-              src: dataPoint.image,
-              x: dataPoint.x,
-              y: dataPoint.y,
-              width: 30,
-              height: 30,
-              events: ['click'],
-              click: function (event) {
-                console.log('Immagine cliccata:', dataPoint.image);
-              },
-            };
-          }),
-        },
+       
       }
     });
   </script>
