@@ -90,6 +90,8 @@
           height: auto;
           margin-bottom: 20px;
           margin-top: 20px;
+          align-items: center;
+          margin: 0 auto; 
       }
 
       .field_q {
