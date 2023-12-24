@@ -823,64 +823,64 @@
   </script>
 
   <script>
-       var ctx = document.getElementById('myChart').getContext('2d');
+    var ctx = document.getElementById('myChart').getContext('2d');
 
-        // Aggiungi l'array di oggetti con le coordinate x, y e il percorso dell'immagine
-        var data = [
-          { x: 1, y: 1970, image: 'images/deandre.jpeg' },
-          { x: 2, y: 1984, image: 'images/troisi.jpg' },
-          { x: 3, y: 2013, image: 'images/boccachiusa.png' },
-          { x: 4, y: 1956, image: 'images/toto.jpeg' },
-          { x: 5, y: 1995, image: 'images/sugar.jpg' },
-          { x: 6, y: 2017, image: 'images/virginia.png' },
-          { x: 7, y: 2009, image: 'images/domani.jpg' },
-          { x: 8, y: 1956, image: 'images/toto.jpeg' },
-          { x: 9, y: 1980, image: 'images/dalla.jpeg' },
-          { x: 10, y: 2009, image: 'images/ragazze.png' },
-        ];
+    // Aggiungi l'array di oggetti con le coordinate x, y e il percorso dell'immagine
+    var data = [
+      { x: 1, y: 1970 },
+      { x: 2, y: 1984 },
+      { x: 3, y: 2013 },
+      { x: 4, y: 1956 },
+      { x: 5, y: 1995 },
+      { x: 6, y: 2017 },
+      { x: 7, y: 2009 },
+      { x: 8, y: 1956 },
+      { x: 9, y: 1980 },
+      { x: 10, y: 2009 },
+    ];
 
-        var myChart = new Chart(ctx, {
-          type: 'scatter',
-          data: {
-            datasets: [{
-              label: 'Punti del grafico',
-              data: data,
-              backgroundColor: 'transparent',
-              borderColor: 'transparent',
-            }]
-          },
-          options: {
-            scales: {
-              xAxes: [{
-                type: 'linear',
-                position: 'bottom'
-              }],
-              yAxes: [{
-                type: 'linear',
-                position: 'left'
-              }]
-            },
-           annotation: {
-              drawTime: 'afterDatasetsDraw',
-              annotations: data.map(function (dataPoint) {
-                return {
-                  type: 'image',
-                  id: dataPoint.image,
-                  src: dataPoint.image,
-                  x: dataPoint.x,
-                  y: dataPoint.y,
-                  width: 30,
-                  height: 30,
-                  events: ['click'],
-                  click: function (event) {
-                    console.log('Immagine cliccata:', dataPoint.image);
-                  },
-                };
-              }),
-            },
-          }
-        });
-</script>
+    var myChart = new Chart(ctx, {
+      type: 'scatter',
+      data: {
+        datasets: [{
+          label: 'Punti del grafico',
+          data: data,
+          pointBackgroundColor: 'pink', // Imposta il colore dei punti
+          pointRadius: 8 // Imposta la dimensione dei punti
+        }]
+      },
+      options: {
+        scales: {
+          xAxes: [{
+            type: 'linear',
+            position: 'bottom'
+          }],
+          yAxes: [{
+            type: 'linear',
+            position: 'left'
+          }]
+        },
+        annotation: {
+          drawTime: 'afterDatasetsDraw',
+          annotations: data.map(function (dataPoint) {
+            return {
+              type: 'image',
+              id: dataPoint.image,
+              src: dataPoint.image,
+              x: dataPoint.x,
+              y: dataPoint.y,
+              width: 30,
+              height: 30,
+              events: ['click'],
+              click: function (event) {
+                console.log('Immagine cliccata:', dataPoint.image);
+              },
+            };
+          }),
+        },
+      }
+    });
+  </script>
 
 </body>
 
