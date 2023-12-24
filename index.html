@@ -844,8 +844,19 @@
         datasets: [{
           label: 'Punti del grafico',
           data: data,
-          pointBackgroundColor: 'pink', // Imposta il colore dei punti
-          pointRadius: 8 // Imposta la dimensione dei punti
+          borderColor: 'transparent', // Colore del bordo trasparente
+          backgroundColor: 'transparent', // Colore di sfondo trasparente
+          pointStyle: data.map(function (dataPoint) {
+            return {
+              render: function (context, point) {
+                var img = new Image();
+                img.src = dataPoint.image;
+                var width = 30; // Larghezza dell'immagine
+                var height = 30; // Altezza dell'immagine
+                context.drawImage(img, point.x - width / 2, point.y - height / 2, width, height);
+              }
+            };
+          }),
         }]
       },
       options: {
