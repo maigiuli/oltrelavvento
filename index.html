@@ -848,7 +848,43 @@ var myChart = new Chart(ctx, {
             position: 'left'
           }
         }
+      }, 
+  plugins: {
+    tooltip: {
+      callbacks: {
+        label: function (context) {
+          var dataPoint = data[context.dataIndex];
+          return [dataPoint.x, dataPoint.y];
+        },
+        afterLabel: function (context) {
+          var dataPoint = data[context.dataIndex];
+          return ['Image: ' + dataPoint.image];
+        },
+        // Utilizza la funzione di visualizzazione personalizzata per mostrare un'immagine
+        labelColor: function (context) {
+          return {
+            borderColor: 'transparent',
+            backgroundColor: 'transparent'
+          };
+        },
+        afterDraw: function (context, element) {
+          var image = new Image();
+          image.src = data[context.dataIndex].image;
+
+          // Imposta la posizione dell'immagine sulla tooltip
+          var x = element.x + context.chart.canvas.offsetLeft - image.width / 2;
+          var y = element.y + context.chart.canvas.offsetTop - image.height - 10;
+
+          // Disegna l'immagine sulla tooltip
+          context.chart.ctx.drawImage(image, x, y, image.width, image.height);
+        }
       }
+    }
+  }
+
+
+
+
     });
   </script>
 
