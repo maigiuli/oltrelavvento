@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="" utf-8" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <title>
     Oltrelasiepe
   </title>
@@ -190,36 +191,7 @@
         </div>
       </div>
       <div class="week-strip">
-        <div class="chart">
-          <div class="axis x-axis"></div>
-          <div class="axis y-axis"></div>
-          <!-- Punto 1 -->
-          <div class="point point1">
-
-            <!-- Immagine per il punto 1 -->
-            <img src="images/annalisa.jpeg" alt="Point 1">
-          </div>
-          <div class="x-axis-label x1">1</div>
-          <div class="y-axis-label y1">Date 1</div>
-
-          <!-- Punto 2 -->
-          <div class="point point2">
-            <!-- Immagine per il punto 2 -->
-            <img src="images/audrey.png" alt="Point 2">
-          </div>
-          <div class="x-axis-label x2">2</div>
-          <div class="y-axis-label y2">Date 2</div>
-
-          <!-- Altri punti ... -->
-
-          <!-- Punto 24 -->
-          <div class="point point24">
-            <!-- Immagine per il punto 24 -->
-            <img src="images/paole.png" alt="Point 24">
-          </div>
-          <div class="x-axis-label x5">5</div>
-          <div class="y-axis-label y5">Date 5</div>
-        </div>
+      <canvas id="myChart"></canvas>
       </div>
 
       <div class="week-strip">
@@ -846,6 +818,39 @@
       video.play();
     }
   </script>
+
+    <script>
+      // Inizializza il grafico utilizzando Chart.js
+      var ctx = document.getElementById('myChart').getContext('2d');
+      var myChart = new Chart(ctx, {
+        type: 'scatter', // Tipo di grafico (puoi cambiare a seconda delle tue esigenze)
+        data: {
+          datasets: [{
+            label: 'Punti del grafico',
+            data: [
+              { x: 1, y: 80 },
+              { x: 2, y: 60 },
+              // ... Altri punti ...
+              { x: 6, y: 60 }
+            ],
+            backgroundColor: '#3498db', // Colore dei punti
+            pointRadius: 10, // Dimensione dei punti
+          }]
+        },
+        options: {
+          scales: {
+            x: {
+              type: 'linear',
+              position: 'bottom'
+            },
+            y: {
+              type: 'linear',
+              position: 'left'
+            }
+          }
+        }
+      });
+    </script>
 
 </body>
 
