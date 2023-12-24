@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="" utf-8" />
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <title>
     Oltrelasiepe
   </title>
@@ -191,7 +191,7 @@
         </div>
       </div>
       <div class="week-strip">
-      <canvas id="myChart"></canvas>
+        <canvas id="myChart"></canvas>
       </div>
 
       <div class="week-strip">
@@ -819,38 +819,38 @@
     }
   </script>
 
-    <script>
-      // Inizializza il grafico utilizzando Chart.js
-      var ctx = document.getElementById('myChart').getContext('2d');
-      var myChart = new Chart(ctx, {
-        type: 'scatter', // Tipo di grafico (puoi cambiare a seconda delle tue esigenze)
-        data: {
-          datasets: [{
-            label: 'Punti del grafico',
-            data: [
-              { x: 1, y: 80 },
-              { x: 2, y: 60 },
-              // ... Altri punti ...
-              { x: 6, y: 60 }
-            ],
-            backgroundColor: '#3498db', // Colore dei punti
-            pointRadius: 10, // Dimensione dei punti
-          }]
-        },
-        options: {
-          scales: {
-            x: {
-              type: 'linear',
-              position: 'bottom'
-            },
-            y: {
-              type: 'linear',
-              position: 'left'
-            }
+  <script>
+    // Inizializza il grafico utilizzando Chart.js
+    var ctx = document.getElementById('myChart').getContext('2d');
+     var data = [
+        { x: 1, y: 80, image: 'images/laura.png' },
+        { x: 2, y: 60, image: 'images/jannacci.png' },
+        // ... Altri punti ...
+        { x: 6, y: 60, image: 'images/jannacci.png' }
+      ];
+var myChart = new Chart(ctx, {
+      type: 'scatter', // Tipo di grafico (puoi cambiare a seconda delle tue esigenze)
+      data: {
+        datasets: [{
+          label: 'Timeline',
+          data: data, 
+          pointRadius: 0, // Dimensione dei punti
+        }]
+      },
+      options: {
+        scales: {
+          x: {
+            type: 'linear',
+            position: 'bottom'
+          },
+          y: {
+            type: 'linear',
+            position: 'left'
           }
         }
-      });
-    </script>
+      }
+    });
+  </script>
 
 </body>
 
