@@ -74,7 +74,7 @@ img {
 .box {
     width: 400px;
     height: 400px;
-    display: inline-block;
+    display: grid;
     text-align: center;
     margin: 0;
     background-color: #4DA69A;
