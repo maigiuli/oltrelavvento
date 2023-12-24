@@ -856,27 +856,28 @@
           }
         },
          plugins: {
-          annotation: {
-            annotations: data.map(function (dataPoint) {
-              return {
-                type: 'image',
-                src: dataPoint.image,
-                x: dataPoint.x,
-                y: dataPoint.y,
-                width: 30, // Larghezza dell'immagine
-                height: 30, // Altezza dell'immagine
-              };
-            })
-          }
-        },
-        elements: {
-          image: {
-            borderWidth: 2,
-            borderColor: 'rgba(255, 0, 0, 1)',
+         plugins: {
+            annotation: {
+              annotations: data.map(function (dataPoint) {
+                return {
+                  type: 'image',
+                  src: dataPoint.image,
+                  x: dataPoint.x,
+                  y: dataPoint.y,
+                  width: 30, // Larghezza dell'immagine
+                  height: 30, // Altezza dell'immagine
+                };
+              })
+            }
+          },
+          elements: {
+            image: {
+              borderWidth: 2,
+              borderColor: 'rgba(255, 0, 0, 1)',
+            }
           }
         }
-      }
-    });
+      });
   </script>
 
 </body>
