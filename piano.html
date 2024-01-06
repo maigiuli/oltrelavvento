@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="" utf-8" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2"></script>
+
+    <title>
+        Oltrelasiepe
+    </title>
+    <link rel="stylesheet" type="text/css" href="consigli.css" />
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TVTTM3X4QD"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-TVTTM3X4QD');
+</script>
+
+<body>
+
+    <div>
+
+        <header>
+            <div class="main_title">
+
+                <img src="images/duck_edited_edited_edited.png" width="100px" id="logo" class="bounceable"
+                    onclick="bounceDuck()" />
+                <h1> Oltrelasiepe </h1>
+            </div>
+            <nav>
+                <ul>
+                    <li> <a href='index.html'> Home </a></li>
+                    <li> <a href='about.html'> About </a></li>
+                    <li> <a href='articoli.html'>Articoli </a></li>
+                    <li> <a href='random.html'>Random </a></li>
+                    <li> <a href='deutsch.html'> Deutsch </a></li>
+                    <li> <a href='consigli.html'> Consigli </a></li>
+                    <li class="special"> <a href='oltreADV.html'> Oltrelavvento </a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+
+
+
+
+
+
+
+
+
+
+            <h2>Il mio brano al pianoforte</h2>
+            <div class="audio-container">
+                <audio controls>
+                    <source src="audio/AUDIO-2024-01-06-10-17-19.m4a" type="audio/m4a">
+                    Il tuo browser non supporta l'elemento audio.
+                </audio>
+                <img src="images/fb.png" alt="Facebook" />
+            </div>
+        </main>
+
+
+
+        <div class="social-strip">
+            <a href="https://www.facebook.com/giulia.maineri.9/" target="_blank">
+                <img src="images/fb.png" alt="Facebook" />
+            </a>
+            <a href="https://www.instagram.com/mai.giuly/" target="_blank">
+                <img src="images/insta-removebg-preview.png" alt="Instagram" />
+            </a>
+            <a href="https://github.com/maigiuli" target="_blank">
+                <img src="images/git.png" alt="git" />
+            </a>
+            <a href="https://www.linkedin.com/in/giulia-maineri-9a687b21a/" target="_blank">
+                <img src="images/linkedin.png" alt="linkedin" />
+
+        </div>
+        <div class="mail">
+            <a href="mailto:maineri.giulia@gmail.com"
+                style="color: #FFD0E8;text-decoration: none;">maineri.giulia@gmail.com</a>
+        </div>
+
+
+
+    </div>
+    <script>
+        function showHiddenContent() {
+            // Nascondi il contenuto visibile
+            document.getElementById('visibleContent').style.display = 'none';
+
+            document.getElementById('sfondoCustom').style.display = 'flex';
+            // Mostra il contenuto nascosto
+            document.getElementById('hiddenContent').style.display = 'block';
+        }
+        function showHiddenContent2() {
+            // Nascondi il contenuto visibile
+            document.getElementById('hiddenContent').style.display = 'none';
+
+            document.getElementById('sfondoCustom2').style.display = 'flex';
+            // Mostra il contenuto nascosto
+            document.getElementById('hiddenContent2').style.display = 'block';
+        }
+        function showCele() {
+            // Nascondi il contenuto visibile
+            document.getElementById('iniziale').style.display = 'none';
+            // Mostra il contenuto nascosto
+            document.getElementById('cele').style.display = 'block';
+        }
+    </script>
+    <script src="falling-letters.js"></script>
+    <script src="oltreADV.js"></script>
+    <script type="text/javascript">  emailjs.init('0Fzharw2Fcn0pLrCK')</script>
+    <script>
+        function redirectToLink(link) {
+            window.open(link, '_blank');
+        }
+
+        function scrollToElement(elementId) {
+            console.log("Chiamata a scrollToElement con elementId:", elementId);
+            var targetElement = document.getElementById(elementId);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+
+
+    <script>
+
+        var dataInizio = new Date('2023-11-01');
+        var oggi;
+        function mostraSpuntiCorrenti() {
+            // Ottieni la data corrente
+            oggi = new Date();
+
+            // Calcola i giorni trascorsi
+            var giorniTrascorsi = Math.floor((oggi - dataInizio) / (1000 * 60 * 60 * 24));
+
+            // Recupera tutti gli elementi container
+            var spunti = document.querySelectorAll('.container');
+
+            spunti.forEach(function (spunto) {
+                var giornoSpunto = parseInt(spunto.getAttribute('data-giorno'));
+                console.log("Giorno spunto:", giornoSpunto);
+                console.log("Giorni trascorsi:", giorniTrascorsi);
+                if (giornoSpunto <= giorniTrascorsi) {
+                    spunto.style.display = 'block';
+                }
+            });
+            console.log(oggi);
+        }
+
+
+        mostraSpuntiCorrenti();
+    </script>
+    <script>
+        function playVideo() {
+            var video = document.getElementById('videoPlayer');
+            video.play();
+        }
+    </script>
+
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+
+        // Aggiungi l'array di oggetti con le coordinate x, y e il percorso dell'immagine
+        var data = [
+            { x: 2, y: 1984, image: 'images/troisi.jpg' },
+            { x: 3, y: 2013, image: 'images/boccachiusa.png' },
+            { x: 4, y: 1956, image: 'images/toto.jpeg' },
+            { x: 5, y: 1995, image: 'images/sugar.jpg' },
+            { x: 6, y: 2017, image: 'images/virginia.png' },
+            { x: 7, y: 2009, image: 'images/domani.jpeg' },
+            { x: 8, y: 1956, image: 'images/toto.jpeg' },
+            { x: 9, y: 1980, image: 'images/dalla.jpeg' },
+            { x: 10, y: 2009, image: 'images/ragazze.png' },
+        ];
+
+        var loadedImages = 0;
+        var totalImages = data.length;
+
+
+        var myChart = new Chart(ctx, {
+            type: 'scatter',
+            data: {
+                datasets: [{
+                    label: 'Punti del grafico',
+                    data: data,
+                    borderColor: 'transparent',
+                    backgroundColor: 'transparent',
+                    pointStyle: data.map(function (dataPoint) {
+                        var img = new Image();
+                        img.src = dataPoint.image;
+                        img.onload = function () {
+                            loadedImages++;
+                            if (loadedImages === totalImages) {
+                                myChart.update(); // Aggiorna il grafico quando tutte le immagini sono caricate
+                            }
+                        };
+                        return {
+                            render: function (context, point) {
+                                var width = 30;
+                                var height = 30;
+                                context.drawImage(img, point.x - width / 2, point.y - height / 2, width, height);
+                            }
+                        };
+                    }),
+                    pointRadius: 5,
+                }]
+            },
+            options: {
+                scales: {
+                    xAxes: [{
+                        type: 'linear',
+                        position: 'bottom'
+                    }],
+                    yAxes: [{
+                        type: 'linear',
+                        position: 'left',
+                        ticks: {
+                            min: 1950,
+                            max: 2020
+                        }
+                    }]
+                }
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>
