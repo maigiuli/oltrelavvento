@@ -169,6 +169,14 @@ body {
     margin-top: 12px;
     margin-left: 10px;
     margin-right: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.audio-container {
+    margin-top: 10px;
+    /* Aggiungi spazio sopra l'elemento audio, se necessario */
 }
 
 .square-image {
@@ -182,6 +190,7 @@ body {
 .square-title {
     font-weight: bold;
     margin-top: 10px;
+    text-align: left;
 }
 
 .square-description {
